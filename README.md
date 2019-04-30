@@ -1,2 +1,2 @@
 # community-project
-Community project (Godot community germany)
+The Project of the German Godot Community!
