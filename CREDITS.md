@@ -11,4 +11,6 @@ This Game are made by the Godot Engine. Thanks.
 
 This Game is made by:
 
-Anastasios Brodersen(AnastiGames). Show her's Website: https://anastigames.itch.io/. 
+Anastasios Brodersen(AnastiGames). Look at his Website: https://anastigames.itch.io/.
+
+HugeGameArtGD: https://hugegameartgd.github.io
