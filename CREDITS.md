@@ -4,7 +4,7 @@ License info:
 
 CC0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
-This Game are made by the Godot Engine. Thanks.
+This Game is made by the Godot Engine. Thanks.
 
 
 
