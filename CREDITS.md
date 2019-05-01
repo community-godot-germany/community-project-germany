@@ -4,6 +4,6 @@ License info:
 
 CC0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
-This Game is maked by:
+This Game is made by:
 
 Anastasios Brodersen(AnastiGames). Show her's Website: https://anastigames.itch.io/. 
