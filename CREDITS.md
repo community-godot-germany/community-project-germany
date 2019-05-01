@@ -14,3 +14,5 @@ This Game is made by:
 Anastasios Brodersen(AnastiGames). Look at his Website: https://anastigames.itch.io/.
 
 HugeGameArtGD: https://hugegameartgd.github.io
+
+icons für die credits https://stuffbyspencer.itch.io/pixelartlogoassets License:
