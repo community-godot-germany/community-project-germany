@@ -24,7 +24,10 @@ func _input(event):
 	if Input.is_action_just_pressed("Pause"):
 		
 		#Called Funktion PauseEntered()
-		PauseEntered()
+		if not pause_mode:
+			PauseEntered()
+		else:
+			PauseExited()
 
 
 #Aktiviert wenn gecalled
@@ -40,8 +43,8 @@ func PauseEntered():
 	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = false
 	
 	#setzt denn pausen modus auf aktiv
-	get_tree().paused = true
-
+	#get_tree().paused = true
+	pause_mode=true
 
 #Aktiviert wenn gecalled
 func PauseExited():
@@ -56,8 +59,8 @@ func PauseExited():
 	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = true
 	
 	#setzt denn pausen modus auf nicht aktiv
-	get_tree().paused = false
-
+	#get_tree().paused = false
+	pause_mode=false
 
 #wird aktiv wenn Weiter gedrückt wird
 func _on_Weiter_pressed():
