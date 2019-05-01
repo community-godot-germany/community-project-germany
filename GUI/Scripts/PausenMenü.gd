@@ -46,7 +46,6 @@ func PauseEntered():
 #Aktiviert wenn gecalled
 func PauseExited():
 	
-	
 	#Spielt Die "Exit" Animation ab
 	$Anim.play("Exit")
 	
@@ -62,7 +61,6 @@ func PauseExited():
 
 #wird aktiv wenn Weiter gedrückt wird
 func _on_Weiter_pressed():
-	
 	#Called Funktion PauseExited()
 	PauseExited()
 
@@ -70,35 +68,21 @@ func _on_Weiter_pressed():
 #wird aktiv wenn Spiel_Beenden gedrückt wird
 func _on_Spiel_Beenden_pressed():
 	#Speichert und Beendet das Spiel
+	#Speichert Fortschritt
 	
-	pass # Replace with function body.
+	#Beendet das Spiel
+	get_tree().quit()
 
 
 #wird aktiv wenn func Options gedrückt wird
 func _on_Options_pressed():
 	#wechselt zum Options Menü
-	
-	pass # Replace with function body.
+	get_tree().change_scene("res://Settings/Settings.tscn")
 
 
 func _on_Exit_pressed():
 	#wechselt zum MainMenu und Speichert denn fortschritt
+	#Speichert Fortschritt
 	
-	pass # Replace with function body.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	#wechselt zum haupmenü
+	get_tree().change_scene("res://Menüs/Menü/Menü.tscn")
