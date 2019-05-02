@@ -1,7 +1,6 @@
 #Pausen Menü Script
 extends Control
 
-
 #Aktiviert wenn Szene Geladen wird
 func _ready():
 	
@@ -22,9 +21,11 @@ func _input(event):
 	
 	#Ist richtig wenn Escape gedrückt wird
 	if Input.is_action_just_pressed("ui_cancel"):
-		#Called Funktion PauseEntered()
+		
+		#wenn pause_mode ist nicht richtig wird das pausen menü geöffnet
 		if not pause_mode:
 			PauseEntered()
+		#wenn pause_mode ist richtig wird das pausen menü geschlossen
 		else:
 			PauseExited()
 
