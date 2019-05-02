@@ -21,7 +21,7 @@ func _ready():
 func _input(event):
 	
 	#Ist richtig wenn Escape gedrückt wird
-	if Input.is_action_just_pressed("Pause"):
+	if Input.is_action_just_pressed("ui_cancel"):
 		#Called Funktion PauseEntered()
 		if not pause_mode:
 			PauseEntered()
