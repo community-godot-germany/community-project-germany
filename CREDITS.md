@@ -1,18 +1,19 @@
-The Font is made by Daniel Linssen. Look at his website https://managore.itch.io/m5x7 License: CC0 Thank you!
-
-License info:
-
-CC0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
-
-This Game is made by the Godot Engine. Thanks.
-
-
-
+This Game is made by the [Godot Engine](https://godotengine.org/). Thanks.
 
 This Game is made by:
 
-Anastasios Brodersen(AnastiGames). Look at his Website: https://anastigames.itch.io/.
+- [Anastasios Brodersen(AnastiGames)](https://anastigames.itch.io/)
+- [HugeGameArtGD](https://hugegameartgd.github.io)
 
-HugeGameArtGD: https://hugegameartgd.github.io
+[Icons for the credits](https://stuffbyspencer.itch.io/pixelartlogoassets) License: custom (look at his website for more information) Thank you!
+- [Itch.io](https://itch.io)
+- [Twitter](https://twitter.com)
+- [Wordpress](https://wordpress.com)
+- [Youtube](https://youtube.com)
+- [twitch](https://twitch.com)
 
-icons für die credits https://stuffbyspencer.itch.io/pixelartlogoassets License:
+[The Font is made by Daniel Linssen](https://managore.itch.io/m5x7) License: CC0 Thank you!
+
+License info:
+
+- [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
