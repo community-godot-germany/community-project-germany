@@ -5,6 +5,10 @@
 [ext_resource path="res://Menüs/Menü/ButtonContainer.gd" type="Script" id=3]
 [ext_resource path="res://Menüs/Menü/font.tres" type="DynamicFont" id=4]
 
+
+
+
+
 [sub_resource type="DynamicFont" id=1]
 size = 47
 font_data = ExtResource( 2 )
