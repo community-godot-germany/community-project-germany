@@ -22,7 +22,6 @@ func _input(event):
 	
 	#Ist richtig wenn Escape gedrückt wird
 	if Input.is_action_just_pressed("Pause"):
-		
 		#Called Funktion PauseEntered()
 		if not pause_mode:
 			PauseEntered()
