@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Credits.gd" type="Script" id=1]
 [ext_resource path="res://Texturen/CreditsBG1.png" type="Texture" id=2]
-[ext_resource path="res://Texturen/Fonts/m5x7.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 1
@@ -27,9 +27,34 @@ text = "Credits"
 [node name="Label2" type="Label" parent="."]
 margin_left = 70.0
 margin_top = 90.0
-margin_right = 373.0
-margin_bottom = 104.0
-text = "The Font is made by Daniel Linssen. Thank you!"
+margin_right = 971.0
+margin_bottom = 529.0
+text = "This Game is made by the [Godot Engine](https://godotengine.org/). Thanks.
+
+This Game is made by:
+
+- [Anastasios Brodersen(AnastiGames)](https://anastigames.itch.io/)
+- [HugeGameArtGD](https://hugegameartgd.github.io)
+
+[Icons for the credits](https://stuffbyspencer.itch.io/pixelartlogoassets) License: custom (look at his website for more information) Thank you!
+- [Itch.io](https://itch.io)
+- [Twitter](https://twitter.com)
+- [Wordpress](https://wordpress.com)
+- [Youtube](https://youtube.com)
+- [twitch](https://twitch.com)
+
+[The Font is made by Daniel Linssen](https://managore.itch.io/m5x7) License: CC0 Thank you!
+
+[Godot Settings Manager by Hugo Locurcio (Calinou) and contributors](https://github.com/Calinou/godot-settings-manager) License: MIT
+Thank you!
+
+[Godot Settings Manager demo by Hugo Locurcio (Calinou) and contributors](https://github.com/Calinou/godot-settings-manager-demo)
+License: MIT Thank you!
+
+License info:
+
+- [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
+- [MIT](https://opensource.org/licenses/mit-license.php)"
 
 [node name="YoutubeBase" type="RichTextLabel" parent="."]
 margin_left = 415.0
@@ -78,17 +103,17 @@ bbcode_text = "[url=\" DER  LINK \"][img]res://Texturen/Wordpress.png[/img][/url
 
 [node name="Twitter" type="Node" parent="."]
 
-[node name="TwitterDanielLinssen" type="RichTextLabel" parent="Twitter"]
-margin_left = 392.0
-margin_top = 86.0
-margin_right = 413.0
-margin_bottom = 109.0
+[node name="ItchIoBase2" type="RichTextLabel" parent="Twitter"]
+margin_left = 673.0
+margin_top = 323.0
+margin_right = 706.0
+margin_bottom = 346.0
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[url=\"https://twitter.com/Managore\"][img]res://Texturen/Twitter.png[/img][/url]"
+bbcode_text = "[url=\"https://managore.itch.io/m5x7\"][img]res://Texturen/Itch.io.png[/img][/url]"
 [connection signal="meta_clicked" from="YoutubeBase" to="." method="_on_RichTextLabel_meta_clicked"]
 [connection signal="meta_clicked" from="ItchIoBase" to="." method="_on_RichTextLabel_meta_clicked"]
 [connection signal="meta_clicked" from="TwitterBase" to="." method="_on_RichTextLabel_meta_clicked"]
 [connection signal="meta_clicked" from="TwitchBase" to="." method="_on_RichTextLabel_meta_clicked"]
 [connection signal="meta_clicked" from="TwitchBase2" to="." method="_on_RichTextLabel_meta_clicked"]
-[connection signal="meta_clicked" from="Twitter/TwitterDanielLinssen" to="." method="_on_RichTextLabel_meta_clicked"]
+[connection signal="meta_clicked" from="Twitter/ItchIoBase2" to="." method="_on_RichTextLabel_meta_clicked"]

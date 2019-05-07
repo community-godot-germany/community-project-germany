@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Settings/ButtonMenüContainer.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
 
 [node name="Stage" type="Node2D"]
 
@@ -26,6 +36,7 @@ margin_left = 336.0
 margin_top = 429.0
 margin_right = 689.0
 margin_bottom = 534.0
+custom_fonts/font = SubResource( 1 )
 text = "Back"
 
 [node name="Credits_Button" type="Button" parent="Center/ButtonContainer/CanvasLayer"]
@@ -33,6 +44,7 @@ margin_left = 335.0
 margin_top = 314.0
 margin_right = 693.0
 margin_bottom = 414.0
+custom_fonts/font = SubResource( 2 )
 text = "Credits"
 
 [node name="Renderer_Button" type="CheckBox" parent="Center/ButtonContainer/CanvasLayer"]
@@ -40,6 +52,7 @@ margin_left = 336.0
 margin_top = 194.0
 margin_right = 691.0
 margin_bottom = 310.0
+custom_fonts/font = SubResource( 3 )
 text = " Set Gles2?"
 align = 1
 
