@@ -1,9 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Menü/ButtonMenüContainer.gd" type="Script" id=1]
-[ext_resource path="res://Menü/font.tres" type="DynamicFont" id=2]
-[ext_resource path="res://New Piskel-1.png (2).png" type="Texture" id=3]
-[ext_resource path="res://New Piskel-1.png (1).png" type="Texture" id=4]
+[ext_resource path="res://Settings/ButtonMenüContainer.gd" type="Script" id=1]
 
 [node name="Stage" type="Node2D"]
 
@@ -29,7 +26,6 @@ margin_left = 336.0
 margin_top = 429.0
 margin_right = 689.0
 margin_bottom = 534.0
-custom_fonts/font = ExtResource( 2 )
 text = "Back"
 
 [node name="Credits_Button" type="Button" parent="Center/ButtonContainer/CanvasLayer"]
@@ -37,7 +33,6 @@ margin_left = 335.0
 margin_top = 314.0
 margin_right = 693.0
 margin_bottom = 414.0
-custom_fonts/font = ExtResource( 2 )
 text = "Credits"
 
 [node name="Renderer_Button" type="CheckBox" parent="Center/ButtonContainer/CanvasLayer"]
@@ -45,11 +40,6 @@ margin_left = 336.0
 margin_top = 194.0
 margin_right = 691.0
 margin_bottom = 310.0
-custom_icons/radio_checked = ExtResource( 3 )
-custom_icons/checked = ExtResource( 3 )
-custom_icons/radio_unchecked = ExtResource( 3 )
-custom_icons/unchecked = ExtResource( 4 )
-custom_fonts/font = ExtResource( 2 )
 text = " Set Gles2?"
 align = 1
 
@@ -63,7 +53,6 @@ color = Color( 0.0117647, 0.65098, 0.933333, 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 512, 304 )
 current = true
-
 [connection signal="pressed" from="Center/ButtonContainer/CanvasLayer/Back_Button" to="Center/ButtonContainer" method="_on_Back_Button_pressed"]
 [connection signal="pressed" from="Center/ButtonContainer/CanvasLayer/Credits_Button" to="Center/ButtonContainer" method="_on_Credits_Button_pressed"]
 [connection signal="pressed" from="Center/ButtonContainer/CanvasLayer/Renderer_Button" to="Center/ButtonContainer" method="_on_Renderer_Button_pressed"]
