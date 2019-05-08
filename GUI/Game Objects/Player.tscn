@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Player" type="Spatial"]
+
+[node name="kinematicBody" type="KinematicBody" parent="."]
+
+[node name="meshInstance" type="MeshInstance" parent="kinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.797192, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 6 )
+
