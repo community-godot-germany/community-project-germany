@@ -17,10 +17,10 @@ ambient_light_energy = 2.8
 environment = SubResource( 1 )
 
 [node name="OmniLight" type="OmniLight" parent="World"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40064, 44.889, 0 )
-light_energy = 5.3
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -187.461, 44.889, 139.688 )
+light_energy = 9.18
 light_indirect_energy = 0.0
-omni_range = 144.0
+omni_range = 994.5
 
 [node name="Camera" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.407, 80 )

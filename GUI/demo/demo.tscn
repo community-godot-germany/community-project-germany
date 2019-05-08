@@ -115,5 +115,6 @@ align = 2
 margin_left = 240.0
 margin_right = 316.0
 margin_bottom = 40.0
+
 [connection signal="text_changed" from="LastLaunch/PlayerName/LineEdit" to="." method="_on_LineEdit_text_changed"]
 [connection signal="pressed" from="LastLaunch/Driver/CheckButton" to="." method="_on_CheckButton_pressed"]
