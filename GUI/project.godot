@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Menüs"
-run/main_scene="res://Menüs/PausenMenü.tscn"
+run/main_scene="res://Main.tscn"
 config/project_settings_override="user://system.ini"
 run/low_processor_mode=true
 config/icon="res://icon.png"
@@ -39,6 +39,7 @@ window/stretch/aspect="expand"
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=1
 quality/intended_usage/framebuffer_allocation.mobile=1
 
