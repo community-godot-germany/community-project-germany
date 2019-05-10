@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Twitter.png-854e3d80a0a67197fbe436ebb577f26a.stex"
+path="res://.import/Twitter.png-f3bba421870e57126e46d724b5dce7b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texturen/Twitter.png"
-dest_files=[ "res://.import/Twitter.png-854e3d80a0a67197fbe436ebb577f26a.stex" ]
+source_file="res://Assets/Texturen/Twitter.png"
+dest_files=[ "res://.import/Twitter.png-f3bba421870e57126e46d724b5dce7b3.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/twitch.png-a0d09c8b0664f37d2149cf271ed3b48e.stex"
+path="res://.import/twitch.png-48c8da36666f5a5a39c7b802919e67b8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texturen/twitch.png"
-dest_files=[ "res://.import/twitch.png-a0d09c8b0664f37d2149cf271ed3b48e.stex" ]
+source_file="res://Assets/Texturen/twitch.png"
+dest_files=[ "res://.import/twitch.png-48c8da36666f5a5a39c7b802919e67b8.stex" ]
 
 [params]
 

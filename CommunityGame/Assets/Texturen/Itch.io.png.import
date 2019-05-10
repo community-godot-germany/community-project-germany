@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Itch.io.png-9c35a0a207827f0b44832cf38c2b7cf9.stex"
+path="res://.import/Itch.io.png-a1ea4befbf3fe01b8f62bd6cca5ccb0b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texturen/Itch.io.png"
-dest_files=[ "res://.import/Itch.io.png-9c35a0a207827f0b44832cf38c2b7cf9.stex" ]
+source_file="res://Assets/Texturen/Itch.io.png"
+dest_files=[ "res://.import/Itch.io.png-a1ea4befbf3fe01b8f62bd6cca5ccb0b.stex" ]
 
 [params]
 

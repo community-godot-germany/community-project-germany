@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Youtube.png-1caa2556267fa300ea6a0da69de31008.stex"
+path="res://.import/Youtube.png-1d01da3fa8c3a34515b9c29f81f3bed5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Texturen/Youtube.png"
-dest_files=[ "res://.import/Youtube.png-1caa2556267fa300ea6a0da69de31008.stex" ]
+source_file="res://Assets/Texturen/Youtube.png"
+dest_files=[ "res://.import/Youtube.png-1d01da3fa8c3a34515b9c29f81f3bed5.stex" ]
 
 [params]
 
