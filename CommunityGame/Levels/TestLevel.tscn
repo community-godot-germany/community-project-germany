@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Game Objects/Tree.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game Objects/World.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game Objects/Treehouse.tscn" type="PackedScene" id=3]
+
+[node name="TestLevel" type="Spatial"]
+
+[node name="directionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.32048, 0.90843, -0.268418, -0.696428, 0.418038, 0.583295, 0.642091, 0, 0.766628, 0, 21.7252, 0 )
+
+[node name="BackGround" type="Spatial" parent="."]
+
+[node name="Tree" parent="BackGround" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15 )
+
+[node name="Tree2" parent="BackGround" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -15 )
+
+[node name="Tree3" parent="BackGround" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -15 )
+
+[node name="PlayGround" type="Spatial" parent="."]
+
+[node name="World" parent="PlayGround" instance=ExtResource( 2 )]
+
+[node name="Treehouse" parent="PlayGround" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, -15 )
+
+[node name="ForeGround" type="Spatial" parent="."]

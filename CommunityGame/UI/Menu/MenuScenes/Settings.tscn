@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Settings/ButtonMenüContainer.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="Stage" type="Node2D"]
+
+[node name="Center" type="CenterContainer" parent="."]
+margin_left = 183.0
+margin_top = 194.0
+margin_right = 786.0
+margin_bottom = 674.0
+
+[node name="ButtonContainer" type="VBoxContainer" parent="Center"]
+margin_left = 301.0
+margin_top = 240.0
+margin_right = 301.0
+margin_bottom = 240.0
+alignment = 1
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Center/ButtonContainer"]
+layer = 4
+
+[node name="Back_Button" type="Button" parent="Center/ButtonContainer/CanvasLayer"]
+margin_left = 336.0
+margin_top = 429.0
+margin_right = 689.0
+margin_bottom = 534.0
+custom_fonts/font = SubResource( 1 )
+text = "Back"
+
+[node name="Credits_Button" type="Button" parent="Center/ButtonContainer/CanvasLayer"]
+margin_left = 335.0
+margin_top = 314.0
+margin_right = 693.0
+margin_bottom = 414.0
+custom_fonts/font = SubResource( 2 )
+text = "Credits"
+
+[node name="Renderer_Button" type="CheckBox" parent="Center/ButtonContainer/CanvasLayer"]
+margin_left = 336.0
+margin_top = 194.0
+margin_right = 691.0
+margin_bottom = 310.0
+custom_fonts/font = SubResource( 3 )
+text = " Set Gles2?"
+align = 1
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = -448.0
+margin_top = -368.0
+margin_right = 1592.0
+margin_bottom = 1054.0
+color = Color( 0.0117647, 0.65098, 0.933333, 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 304 )
+current = true
+[connection signal="pressed" from="Center/ButtonContainer/CanvasLayer/Back_Button" to="Center/ButtonContainer" method="_on_Back_Button_pressed"]
+[connection signal="pressed" from="Center/ButtonContainer/CanvasLayer/Credits_Button" to="Center/ButtonContainer" method="_on_Credits_Button_pressed"]
+[connection signal="pressed" from="Center/ButtonContainer/CanvasLayer/Renderer_Button" to="Center/ButtonContainer" method="_on_Renderer_Button_pressed"]

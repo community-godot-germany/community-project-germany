@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Camera" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 10, 20 )
+far = 8192.0
