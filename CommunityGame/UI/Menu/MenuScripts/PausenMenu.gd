@@ -45,7 +45,8 @@ func PauseEntered():
 	
 	#setzt denn pausen modus auf aktiv
 	#get_tree().paused = true
-	pause_mode = true
+	pause_mode != pause_mode
+	get_node("/root/Main/TestLevel/Player").set_physics_process(false)
 
 #Aktiviert wenn gecalled
 func PauseExited():
@@ -61,7 +62,8 @@ func PauseExited():
 	
 	#setzt denn pausen modus auf nicht aktiv
 	#get_tree().paused = false
-	pause_mode = false
+	pause_mode != pause_mode
+	get_node("/root/Main/TestLevel/Player").set_physics_process(true)
 
 #wird aktiv wenn Weiter gedrückt wird
 func _on_Weiter_pressed():
