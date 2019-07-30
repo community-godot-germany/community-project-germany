@@ -1,94 +1,84 @@
-#Pausen Menü Script
+# Pausenmenu Script
 extends Control
 
-#Aktiviert wenn Szene Geladen wird
+# Aktiviert, wenn Szene geladen wird
 func _ready():
-	
-	#setzt denn pausen modus auf nicht aktiv
-	#get_tree().paused = false
+	# Setzt den Pausenmodus auf inaktiv
 	pause_mode = false
 	
-	#Spielt Die "Beginn" Animation ab
+	# Spielt Die Beginn-Animation ab
 	$Anim.play("Beginn")
 	
-	#Deaktiviert Die Knöpfe 
+	# Deaktiviert die Knöpfe 
 	$CanvasLayer/HBoxContainer/VBoxContainer/Exit.disabled = true
 	$CanvasLayer/HBoxContainer/VBoxContainer/Options.disabled = true
 	$CanvasLayer/HBoxContainer/VBoxContainer/Weiter.disabled = true
 	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = true
 
-#wird jedes mal Aktiviert wenn ein Knopf gedrückt wird
+# Wird jeweils aktiviert, wenn ein Knopf gedrückt wird
 func _input(event):
-	
-	#Ist richtig wenn Escape gedrückt wird
+	# Wenn Escape gedrückt wird
 	if Input.is_action_just_pressed("ui_cancel"):
-		
-		#wenn pause_mode ist nicht richtig wird das pausen menü geöffnet
+		# Wenn bisher noch nicht pausiert wurde, wird jedenfalls jetzt das Pausenmenu geöffnet
 		if not pause_mode:
 			PauseEntered()
-		#wenn pause_mode ist richtig wird das pausen menü geschlossen
+		# Wenn bisher schon das Pausenmenu offen war, dann wird jetzt nicht mehr pausiert
 		else:
 			PauseExited()
 
 
-#Aktiviert wenn gecalled
+# Aktiviert, wenn aufgerufen
 func PauseEntered():
 	
-	#Spielt Die "Enter" Animation ab
+	# Spielt Die Enter-Animation ab
 	$Anim.play("Enter")
 	
-	#Aktiviert Die Knöpfe
+	# Aktiviert die Knöpfe
 	$CanvasLayer/HBoxContainer/VBoxContainer/Exit.disabled = false
 	$CanvasLayer/HBoxContainer/VBoxContainer/Options.disabled = false
 	$CanvasLayer/HBoxContainer/VBoxContainer/Weiter.disabled = false
 	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = false
 	
-	#setzt denn pausen modus auf aktiv
-	#get_tree().paused = true
+	# Setzt den Pausenmodus auf aktiv
 	pause_mode != pause_mode
 	get_node("/root/Main/TestLevel/Player").set_physics_process(false)
 
-#Aktiviert wenn gecalled
+# Aktiviert, wenn aufgerufen
 func PauseExited():
 	
-	#Spielt Die "Exit" Animation ab
+	# Spielt Die Exit-Animation ab
 	$Anim.play("Exit")
 	
-	#Deaktiviert Die Knöpfe
+	# Deaktiviert die Knöpfe
 	$CanvasLayer/HBoxContainer/VBoxContainer/Exit.disabled = true
 	$CanvasLayer/HBoxContainer/VBoxContainer/Options.disabled = true
 	$CanvasLayer/HBoxContainer/VBoxContainer/Weiter.disabled = true
 	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = true
 	
-	#setzt denn pausen modus auf nicht aktiv
-	#get_tree().paused = false
+	# Setzt den Pausenmodus auf inaktiv
 	pause_mode != pause_mode
 	get_node("/root/Main/TestLevel/Player").set_physics_process(true)
 
-#wird aktiv wenn Weiter gedrückt wird
+# Wird aktiv, wenn "Weiter" gedrückt wird
 func _on_Weiter_pressed():
 	#Called Funktion PauseExited()
 	PauseExited()
 
 
-#wird aktiv wenn Spiel_Beenden gedrückt wird
+# Wird aktiv, wenn Spiel_Beenden gedrückt wird
 func _on_Spiel_Beenden_pressed():
-	#Speichert und Beendet das Spiel
-	#Speichert Fortschritt
+	# Speichert und beendet das Spiel
+	# TODO: Speichere den Fortschritt
 	
 	#Beendet das Spiel
 	get_tree().quit()
 
-
-#wird aktiv wenn func Options gedrückt wird
+# Wird aktiv, wenn "Options" gedrückt wird
 func _on_Options_pressed():
-	#wechselt zum Options Menü
+	# Wechselt zum Settings-Menü
 	get_tree().change_scene("res://Settings/Settings.tscn")
 
 
 func _on_Exit_pressed():
-	#wechselt zum MainMenu und Speichert denn fortschritt
-	#Speichert Fortschritt
-	
-	#wechselt zum haupmenü
+	# Wechselt zum Mainmenu und speichert den Fortschritt
 	get_tree().change_scene("res://Menüs/Menü/Menü.tscn")
