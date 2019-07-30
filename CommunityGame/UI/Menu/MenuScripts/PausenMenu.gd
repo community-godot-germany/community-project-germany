@@ -45,9 +45,9 @@ func PauseEntered():
 	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = false
 	
 	# Setzt den Pausenmodus auf aktiv
-	pause_mode = true
-	get_tree().paused != get_tree().paused
-	get_node("/root/Main/TestLevel/Player").set_physics_process(false)
+	get_tree().paused = true
+	pause_mode = 2
+	
 
 
 # Aktiviert, wenn aufgerufen
@@ -63,9 +63,8 @@ func PauseExited():
 	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = true
 	
 	# Setzt den Pausenmodus auf inaktiv
+	get_tree().paused = false
 	pause_mode = false
-	get_tree().paused != get_tree().paused
-	get_node("/root/Main/TestLevel/Player").set_physics_process(true)
 
 
 # Wird aktiv, wenn "Weiter" gedrückt wird
