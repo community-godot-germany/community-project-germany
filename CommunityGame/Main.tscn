@@ -56,4 +56,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -84 )
 [node name="Menus" type="Spatial" parent="."]
 
 [node name="PausenMenü" parent="." instance=ExtResource( 5 )]
-pause_mode = 2

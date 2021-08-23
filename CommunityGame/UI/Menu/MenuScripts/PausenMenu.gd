@@ -1,30 +1,18 @@
-# Pausenmenu Script
-extends Control
+# Copyright (c) 2019-2021 community godot germany (members and contributors) - MIT License
 
-#variable an der man erkennt ob das spiel pausiert ist
+extends Control
 
 # Aktiviert, wenn Szene geladen wird
 func _ready():
-	
 	# Setzt den Pausenmodus auf inaktiv
-	pause_mode = false
-	
-	
+	PauseExited()
 	# Spielt Die Beginn-Animation ab
 	$Anim.play("Beginn")
-	
-	# Deaktiviert die Knöpfe 
-	$CanvasLayer/HBoxContainer/VBoxContainer/Exit.disabled = true
-	$CanvasLayer/HBoxContainer/VBoxContainer/Options.disabled = true
-	$CanvasLayer/HBoxContainer/VBoxContainer/Weiter.disabled = true
-	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = true
-
 
 # Wird jeweils aktiviert, wenn ein Knopf gedrückt wird
-func _input(event):
+func _input(_event):
 	# Wenn Escape gedrückt wird
 	if Input.is_action_just_pressed("ui_cancel"):
-
 		# Wenn bisher noch nicht pausiert wurde, wird jedenfalls jetzt das Pausenmenu geöffnet
 		if not pause_mode:
 			PauseEntered()
@@ -34,34 +22,20 @@ func _input(event):
 
 # Aktiviert, wenn aufgerufen
 func PauseEntered():
-	
 	# Spielt Die Enter-Animation ab
 	$Anim.play("Enter")
-	
-	# Aktiviert die Knöpfe
-	$CanvasLayer/HBoxContainer/VBoxContainer/Exit.disabled = false
-	$CanvasLayer/HBoxContainer/VBoxContainer/Options.disabled = false
-	$CanvasLayer/HBoxContainer/VBoxContainer/Weiter.disabled = false
-	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = false
-	
 	# Setzt den Pausenmodus auf aktiv
 	get_tree().paused = true
-	pause_mode = 2
-	
-
+	pause_mode = true
+	for node in $CanvasLayer/HBoxContainer/VBoxContainer.get_children():
+		$CanvasLayer/HBoxContainer/VBoxContainer.get_node(node.name).disabled=false
 
 # Aktiviert, wenn aufgerufen
 func PauseExited():
-	
 	# Spielt Die Exit-Animation ab
 	$Anim.play("Exit")
-	
-	# Deaktiviert die Knöpfe
-	$CanvasLayer/HBoxContainer/VBoxContainer/Exit.disabled = true
-	$CanvasLayer/HBoxContainer/VBoxContainer/Options.disabled = true
-	$CanvasLayer/HBoxContainer/VBoxContainer/Weiter.disabled = true
-	$CanvasLayer/HBoxContainer/VBoxContainer/Spiel_Beenden.disabled = true
-	
+	for node in $CanvasLayer/HBoxContainer/VBoxContainer.get_children():
+		$CanvasLayer/HBoxContainer/VBoxContainer.get_node(node.name).disabled=true
 	# Setzt den Pausenmodus auf inaktiv
 	get_tree().paused = false
 	pause_mode = false
@@ -69,26 +43,29 @@ func PauseExited():
 
 # Wird aktiv, wenn "Weiter" gedrückt wird
 func _on_Weiter_pressed():
-	
 	#Called Funktion PauseExited()
 	PauseExited()
-
 
 # Wird aktiv, wenn "Spiel_Beenden" gedrückt wird
 func _on_Spiel_Beenden_pressed():
 	# Speichert und beendet das Spiel
 	# TODO: Speichere den Fortschritt
-	
 	#Beendet das Spiel
 	get_tree().quit()
-
 
 # Wird aktiv, wenn "Options" gedrückt wird
 func _on_Options_pressed():
 	# Wechselt zum Settings-Menu
-	get_tree().change_scene("res://Settings/Settings.tscn")
-
+	PauseExited()
+	var simultaneous_scene = load("res://UI/Menu/MenuScenes/Settings.tscn").instance()
+	get_node(".").queue_free()
+	get_tree().get_root().add_child(simultaneous_scene)
 
 func _on_Exit_pressed():
-	# Wechselt zum Mainmenu und speichert den Fortschritt
-	get_tree().change_scene("res://Menüs/Menü/Menü.tscn")
+	# Wechselt zum Main-Menu
+	PauseExited()
+	var simultaneous_scene = load("res://UI/Menu/MenuScenes/Menu.tscn").instance()
+	get_tree().get_root().add_child(simultaneous_scene)
+	for node in get_tree().get_root().get_children():
+		if node.name != simultaneous_scene.name:
+			get_tree().get_root().get_node(node.name).queue_free()

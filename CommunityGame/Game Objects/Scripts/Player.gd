@@ -1,4 +1,5 @@
-#Copyright (c) 2019 community godot germany (members and contributors) - MIT License
+# Copyright (c) 2019-2021 community godot germany (members and contributors) - MIT License
+
 extends KinematicBody
 
 onready var scene_camera = $"../Camera/Camera"
